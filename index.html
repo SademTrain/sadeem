@@ -255,21 +255,206 @@ footer{background:rgba(8,4,24,.97);border-top:1px solid rgba(255,255,255,.07);pa
 .footer-bottom p{font-size:12px;color:rgba(255,255,255,.28)}
 
 /* ══ RESPONSIVE ══ */
+/* ══════════════════════════════
+   RESPONSIVE — TABLET (≤900px)
+══════════════════════════════ */
 @media(max-width:900px){
-  .about-grid,.coop-grid{grid-template-columns:1fr}
-  .accred-grid{grid-template-columns:repeat(2,1fr)}
-  .workshops-grid,.feat-grid{grid-template-columns:1fr 1fr}
-  .docs-grid{grid-template-columns:1fr}
-  .footer-top{grid-template-columns:1fr 1fr}
+  /* Nav */
   .nav-links{display:none}
-}
-@media(max-width:600px){
-  .workshops-grid,.feat-grid,.accred-grid{grid-template-columns:1fr}
-  .stats{gap:28px}
-  .footer-top{grid-template-columns:1fr}
+  nav{padding:0 1.2rem}
+  .nav-wa{padding:8px 16px;font-size:13px}
+
+  /* Hero */
+  .hero{padding:100px 1.4rem 4rem}
+  .hero-logo{width:100px;margin-bottom:20px}
+  .hero p{font-size:16px}
+
+  /* Counters */
+  .counters-grid{flex-wrap:wrap}
+  .counter-item{min-width:calc(33.33% - 1px);padding:28px 16px}
+  .counter-num{font-size:40px}
+  .counter-icon{font-size:24px}
+  .counter-label{font-size:13px}
+
+  /* Sections */
+  section{padding:64px 1.4rem}
+  .sec-hd{margin-bottom:36px}
+  .sec-sub{font-size:15px}
+
+  /* About */
+  .about-grid{grid-template-columns:1fr}
+  .founder-ring{width:220px;height:220px}
+
+  /* Accreditations */
+  .accred-grid{grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:36px}
+  .accred-logo-wrap{width:90px;height:90px}
+  .accred-logo-inner{width:86px;height:86px}
+  .accred-logo-inner img{width:58px;height:58px}
+
+  /* Docs */
+  .docs-grid{grid-template-columns:1fr}
+  .coop-grid{grid-template-columns:repeat(2,1fr)}
+
+  /* Workshops */
+  .workshops-grid{grid-template-columns:1fr 1fr}
+
+  /* Services */
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+
+  /* Features */
+  .feat-grid{grid-template-columns:1fr 1fr}
+
+  /* Pricing */
+  .price-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}
+  .price-card.featured{transform:scale(1)}
+
+  /* Footer */
+  .footer-top{grid-template-columns:1fr 1fr}
 }
 
-/* ══ WHATSAPP SVG shorthand ══ */
+/* ══════════════════════════════
+   RESPONSIVE — MOBILE (≤600px)
+══════════════════════════════ */
+@media(max-width:600px){
+  /* Nav */
+  nav{padding:0 1rem}
+  .nav-logo img{height:38px}
+  .nav-wa{padding:7px 13px;font-size:12px;gap:5px}
+  .nav-wa svg{width:14px;height:14px}
+
+  /* Hero */
+  .hero{padding:90px 1.1rem 3.5rem;min-height:auto}
+  .hero-logo{width:82px;margin-bottom:16px}
+  .badge{font-size:11px;padding:6px 14px}
+  .hero h1{font-size:clamp(28px,8vw,42px);line-height:1.2}
+  .hero p{font-size:14px;margin-bottom:28px}
+  .btn-p,.btn-wa{padding:12px 26px;font-size:14px}
+  .hero-btns{flex-direction:column;align-items:center;gap:12px}
+
+  /* Counters — stack vertically */
+  .counter-item{min-width:100%;padding:22px 16px;border-bottom:1px solid rgba(255,255,255,.05)}
+  .counter-item:not(:last-child)::after{display:none}
+  .counter-num{font-size:44px}
+  .counter-icon{font-size:26px;margin-bottom:6px}
+  .counter-label{font-size:14px}
+
+  /* Sections */
+  section{padding:52px 1rem}
+  .sec-hd{margin-bottom:28px;text-align:center}
+  .sec-sub{font-size:14px;margin-inline:auto}
+
+  /* About */
+  .founder-ring{width:180px;height:180px}
+  .about-badges{justify-content:center}
+  .founder-name{text-align:center}
+  .about-text h2{text-align:center}
+
+  /* Accreditations */
+  .accred-grid{grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px}
+  .accred-card{padding:20px 12px 16px}
+  .accred-logo-wrap{width:76px;height:76px}
+  .accred-logo-inner{width:72px;height:72px}
+  .accred-logo-inner img{width:48px;height:48px}
+  .accred-name{font-size:11px}
+
+  /* Docs */
+  .docs-grid{grid-template-columns:1fr}
+  .doc-card img{height:200px}
+
+  /* Cooperation */
+  .coop-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .coop-card img{height:150px}
+  .coop-card-label{font-size:12px;padding:8px 10px}
+
+  /* Workshops */
+  .workshops-grid{grid-template-columns:1fr}
+
+  /* Services */
+  .svc-grid{grid-template-columns:1fr}
+  .svc-card{padding:26px 20px 22px}
+  .svc-icon-wrap{width:48px;height:48px;font-size:20px;margin-bottom:16px}
+  .svc-card h3{font-size:17px}
+  .svc-card p{font-size:13px}
+
+  /* Features */
+  .feat-grid,.accred-grid{grid-template-columns:1fr}
+  .feat-card{padding:22px 18px}
+  .feat-card h3{font-size:16px}
+  .feat-card p{font-size:13px}
+
+  /* Pricing */
+  .price-grid{grid-template-columns:1fr;max-width:100%}
+  .price-card{padding:28px 20px}
+  .price-card.featured{transform:scale(1)}
+  .price-tier{font-size:12px}
+  .price-features li{font-size:13px}
+
+  /* CTA */
+  .cta-inner h2{font-size:clamp(22px,6vw,34px)}
+  .cta-inner p{font-size:14px}
+
+  /* Footer */
+  .footer-top{grid-template-columns:1fr;gap:28px}
+  .footer-bottom{flex-direction:column;gap:10px;text-align:center}
+  .footer-brand{font-size:13px}
+
+  /* Float WhatsApp */
+  .float-wa{width:52px;height:52px;bottom:18px;left:18px}
+  .float-wa svg{width:26px;height:26px}
+
+  /* Lightbox close */
+  .lb-close{top:14px;left:14px;font-size:28px}
+}
+
+/* ══════════════════════════════
+   RESPONSIVE — SMALL (≤380px)
+══════════════════════════════ */
+@media(max-width:380px){
+  .hero h1{font-size:26px}
+  .hero p{font-size:13px}
+  .accred-grid{grid-template-columns:1fr 1fr}
+  .coop-grid{grid-template-columns:1fr}
+  .counters-grid{flex-direction:column}
+  .counter-item{border-bottom:1px solid rgba(255,255,255,.05)}
+  .counter-item:not(:last-child)::after{display:none}
+  nav{padding:0 .8rem}
+  section{padding:44px .9rem}
+}
+
+/* ══ HAMBURGER ══ */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;border-radius:8px}
+.hamburger span{display:block;width:24px;height:2px;background:rgba(255,255,255,.8);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mob-drawer{
+  display:block;position:fixed;top:72px;right:0;left:0;z-index:190;
+  background:rgba(12,8,38,.97);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(0,200,224,.15);
+  padding:0;max-height:0;overflow:hidden;
+  transition:max-height .4s cubic-bezier(.4,0,.2,1),padding .4s ease;
+}
+.mob-drawer.open{max-height:600px;padding:8px 0 24px}
+
+.mob-drawer ul{list-style:none;padding:0;margin:0}
+.mob-drawer li a{
+  display:flex;align-items:center;gap:14px;
+  padding:15px 24px;font-size:16px;font-weight:700;
+  color:rgba(255,255,255,.82);text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  transition:color .2s,background .2s,padding-right .2s;
+}
+.mob-drawer li a:hover,.mob-drawer li a:active{
+  color:var(--cyan);background:rgba(0,200,224,.06);padding-right:30px;
+}
+.mob-drawer li a .m-icon{
+  width:36px;height:36px;border-radius:10px;flex-shrink:0;
+  background:rgba(107,33,212,.2);border:1px solid rgba(107,33,212,.3);
+  display:flex;align-items:center;justify-content:center;font-size:17px;
+  transition:background .2s;
+}
+.mob-drawer li a:hover .m-icon{background:rgba(0,200,224,.15);border-color:rgba(0,200,224,.3);}
+@media(max-width:900px){.hamburger{display:flex}}
 .wa-svg-path{d:path("M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z")}
 </style>
 </head>
@@ -295,12 +480,37 @@ footer{background:rgba(8,4,24,.97);border-top:1px solid rgba(255,255,255,.07);pa
       <li><a href="#pricing">العضويات</a></li>
       <li><a href="#contact">تواصل معنا</a></li>
     </ul>
-    <a href="https://wa.me/96594901254" target="_blank" class="nav-wa">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <div style="display:flex;align-items:center;gap:10px">
+      <a href="https://wa.me/96594901254" target="_blank" class="nav-wa">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        تواصل عبر واتساب
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="mob-drawer" id="mobDrawer">
+  <ul>
+    <li><a href="#about" onclick="closeDrw()"><span class="m-icon">👤</span>من نحن</a></li>
+    <li><a href="#accred" onclick="closeDrw()"><span class="m-icon">🏅</span>الاعتمادات</a></li>
+    <li><a href="#workshops" onclick="closeDrw()"><span class="m-icon">📋</span>الدورات والورش</a></li>
+    <li><a href="#services" onclick="closeDrw()"><span class="m-icon">⚙️</span>خدماتنا</a></li>
+    <li><a href="#cooperation" onclick="closeDrw()"><span class="m-icon">🤝</span>الشراكات</a></li>
+    <li><a href="#pricing" onclick="closeDrw()"><span class="m-icon">💎</span>العضويات</a></li>
+    <li><a href="#contact" onclick="closeDrw()"><span class="m-icon">📞</span>تواصل معنا</a></li>
+  </ul>
+  <div style="padding:16px 24px 4px">
+    <a href="https://wa.me/96594901254" target="_blank" onclick="closeDrw()"
+       style="display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:13px;border-radius:14px;text-decoration:none;font-size:15px;font-weight:800">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       تواصل عبر واتساب
     </a>
   </div>
-</nav>
+</div>
 
 <!-- ══ HERO ══ -->
 <section class="hero">
@@ -310,10 +520,10 @@ footer{background:rgba(8,4,24,.97);border-top:1px solid rgba(255,255,255,.07);pa
     <div class="hero-grid"></div>
   </div>
   <div class="hero-content">
-     <div class="badge"><span class="badge-dot"></span><h2>سديم منصة المعرفة المتجددة </h2></div>
+   <div class="badge"><span class="badge-dot"></span><h2>سديم منصة المعرفة المتجددة </h2></div>
     <h1>وجهتك الأولى<br><span class="grad">لاحتراف التدريب</span></h1>
     <p>منصة سديم تجمع نخبة من المدربين الدوليين المعتمدين في الكويت والوطن العربي — لأن التعلم رحلة لا تنتهي</p>
-    <div class="btns">
+    <div class="btns hero-btns">
       <a href="#workshops" class="btn-p">استكشف الدورات</a>
       <a href="https://wa.me/96594901254" target="_blank" class="btn-wa">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -945,6 +1155,20 @@ function closeLightbox(){
   document.body.style.overflow='';
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+</script>
+<!-- ══ HAMBURGER SCRIPT ══ -->
+<script>
+const ham=document.getElementById('hamburger');
+const drw=document.getElementById('mobDrawer');
+ham.addEventListener('click',()=>{
+  ham.classList.toggle('open');
+  drw.classList.toggle('open');
+});
+function closeDrw(){ham.classList.remove('open');drw.classList.remove('open');}
+// close on outside click
+document.addEventListener('click',e=>{
+  if(!ham.contains(e.target)&&!drw.contains(e.target))closeDrw();
+});
 </script>
 </body>
 </html>
